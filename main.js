@@ -1,13 +1,8 @@
 const http = require('http');
 const port = 3000;
-const fs=require('fs');
-const data={
-  value:'Hello, World!'
-}
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async(req, res) => {
   // TODO: Send the ""Hello, world!"" response
-console.log(`res.data: ${data.value}`);
 res.end('Hello, World!');
 });
 
