@@ -4,13 +4,13 @@ const fs=require('fs');
 
 const server = http.createServer((req, res) => {
   // TODO: Send the ""Hello, world!"" response
-  res.end('Hello, World!');
 fs.readFile('./output.txt','utf8',(err,data)=>{
   if(err){
     console.log(err.message);
   }
   console.log(`res.data: ${data}`);
-})
+});
+res.end('Hello, World!');
 });
 
 server.listen(port, () => {
