@@ -1,9 +1,11 @@
 const http = require('http');
 const port = 3000;
+const res={data:"Hello, World!"}
 
-const server = http.createServer(async(req, res) => {
+const server = http.createServer(async(req, res1) => {
   // TODO: Send the ""Hello, world!"" response
-res.end('Hello, World!');
+res1.end('Hello, World!');
+console.log(`res.data: ${res.data}`);
 });
 
 server.listen(port, () => {
