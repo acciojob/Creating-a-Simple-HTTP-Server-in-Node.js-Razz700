@@ -1,19 +1,20 @@
 const http = require('http');
 const port = 3000;
-const res={data:"Hello, World!"}
+const res={data:"Hello, World!"};
+const fs=require('fs');
 
-const server = http.createServer(async(req, res1) => {
+const server = http.createServer((req, res1) => {
   // TODO: Send the ""Hello, world!"" response
 res1.end('Hello, World!');
 //console.log(`res.data: ${res.data}`);
 });
-//console.log(`res.data: ${res.data}`);
 server.listen(port, () => {
   // TODO: Log a message to the console when the server starts listening on the port
   console.log('Server running on port 3000');
-  console.log(`res.data: ${res.data}`);
 });
-
+fs.readFile('./output.txt','utf-8',(err,data)=>{
+  console.log(`res.data: ${data}`);
+})
 // DO NOT EDIT BELOW THIS LINE
 
 module.exports = { server }
