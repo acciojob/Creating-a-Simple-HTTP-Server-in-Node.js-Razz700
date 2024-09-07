@@ -1,15 +1,13 @@
 const http = require('http');
 const port = 3000;
 const fs=require('fs');
+const data={
+  value:'Hello, World!'
+}
 
 const server = http.createServer((req, res) => {
   // TODO: Send the ""Hello, world!"" response
-fs.readFile('./output.txt','utf8',(err,data)=>{
-  if(err){
-    console.log(err.message);
-  }
-  console.log(`res.data: ${data}`);
-});
+console.log(`res.data: ${data.value}`);
 res.end('Hello, World!');
 });
 
