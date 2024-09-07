@@ -12,8 +12,8 @@ server.listen(port, () => {
   // TODO: Log a message to the console when the server starts listening on the port
   console.log('Server running on port 3000');
 });
-fs.readFile('./output.txt','utf-8',(err,data)=>{
-  console.log(`res.data: ${data}`);
+fs.readFile('./output.txt','utf8',(err,data)=>{
+  console.log(`res.data: ${res.data}`);
 })
 // DO NOT EDIT BELOW THIS LINE
 
